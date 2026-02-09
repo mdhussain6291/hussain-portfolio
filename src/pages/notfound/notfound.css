@@ -1,0 +1,31 @@
+.notfound {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.notfound h1 {
+  font-size: 6rem;
+}
+
+.notfound h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.notfound p {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.home-btn {
+  padding: 10px 25px;
+  border-radius: 30px;
+  background: linear-gradient(267deg, #da7c25, #b923e1);
+  color: white;
+  text-decoration: none;
+}

@@ -1,0 +1,75 @@
+.about {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  color: white;
+}
+
+.about-card {
+  max-width: 800px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05); /* very light transparency for glass effect */
+  backdrop-filter: blur(15px); /* stronger glass blur */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+  border-radius: 20px;
+  border: 1px solid rgba(0, 229, 255, 0.3); /* subtle cyan border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* soft shadow for depth */
+  text-align: center;
+  color: #ffffffcc; /* slightly transparent white text */
+  transition: all 0.3s ease;
+}
+
+.about-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00e5ff44;
+  box-shadow: 0 0 25px #00e5ff33;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px #00e5ff66;
+}
+
+.about-card h1 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow:
+    0 0 5px #00e5ff,
+    0 0 10px #00e5ff,
+    0 0 15px #00e5ff33;
+}
+
+.about-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.about-hobbies {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.about-hobbies li {
+  margin: 10px 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.about-hobbies li::before {
+  content: '';
+  margin-right: 10px;
+}

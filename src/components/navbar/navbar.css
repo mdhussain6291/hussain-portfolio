@@ -1,0 +1,63 @@
+/* JARVIS COLOR THEME */
+:root {
+  --jarvis-bg: linear-gradient(135deg, #020617, #03132b, #041c3a);
+  --jarvis-cyan: #00e5ff;
+  --jarvis-orange: #ff6a00;
+  --jarvis-text: #e5faff;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 40px;
+
+  /* Glass effect */
+  background: rgba(2, 6, 23, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  /* Only bottom rounded */
+  border-radius: 0 0 14px 14px;
+
+  border-bottom: 1px solid rgba(0,229,255,0.3);
+
+  box-shadow: 0 4px 20px rgba(0,229,255,0.25);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+/* Logo */
+.nav-logo {
+  width: 80px;
+  height: 80px;
+  object-fit:cover;
+  border-radius: 50%;
+
+  /* arc reactor glow */
+  box-shadow: 0 0 10px var(--jarvis-cyan);
+}
+
+/* Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  font-size: 18px;
+}
+
+.nav-menu li a {
+  cursor: pointer;
+  color: var(--jarvis-text);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: var(--jarvis-cyan);
+  text-shadow: 0 0 6px var(--jarvis-cyan);
+}

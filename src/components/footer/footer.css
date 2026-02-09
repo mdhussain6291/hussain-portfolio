@@ -1,0 +1,52 @@
+.footer {
+  /* Glassmorphism background */
+  background: rgba(26, 26, 26, 0.6); /* semi-transparent dark grey */
+  backdrop-filter: blur(10px);       /* blur behind the footer */
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  
+  border-top: 2px solid #00e5ff55;   /* subtle neon border on top */
+  border-radius: 10px 10px 0 0;      /* rounded top corners */
+  
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 50px;
+}
+.footer-content h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+  text-shadow:
+    0 0 5px #00e5ff,
+    0 0 10px #00e5ff,
+    0 0 15px #00e5ff33;
+}
+
+.footer-content p {
+  color: #ccc;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-socials a {
+  color: #00e5ff;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  transform: scale(1.2);
+  color: #B923E1; /* subtle hover glow */
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #777;
+}

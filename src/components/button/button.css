@@ -1,0 +1,24 @@
+.btn {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #00000055;
+}
+
+/* Primary button - blue/purple gradient for dark theme */
+.btn.primary {
+  background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 100%);
+  color: white;
+  box-shadow: 0 0 10px #B923E1aa;
+}
+
+.btn.primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #B923E1cc;
+}
+

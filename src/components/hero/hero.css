@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* JARVIS COLORS */
+:root {
+  --jarvis-cyan: #00e5ff;
+  --jarvis-orange: #ff6a00;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 50px 20px;
+  min-height: 100vh;
+ 
+  color: white;
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+/* Profile Image */
+.hero-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 25px;
+  border: 2px solid var(--jarvis-cyan);
+  box-shadow: 0 0 20px rgba(0,229,255,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Heading */
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Name highlight */
+.hero-name {
+  color: var(--jarvis-cyan);
+  text-shadow: 0 0 8px var(--jarvis-cyan);
+}
+
+/* Paragraph */
+.hero p {
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+  color: #bfefff;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+/* Force buttons to Jarvis color */
+.hero-buttons .btn {
+  background: var(--jarvis-orange);
+  box-shadow: 0 0 10px var(--jarvis-orange);
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .hero-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}
