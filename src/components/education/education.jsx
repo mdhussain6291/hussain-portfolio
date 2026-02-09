@@ -16,7 +16,7 @@ const Education = () => {
           <img src={bpimtLogo} alt="BP Poddar Institute Logo" className="edu-logo" />
           <h3>B.Tech in Computer Science Engineering</h3>
           <p>BP Poddar Institute of Management and Technology</p>
-          <span>2023 – 2027</span>
+          <span>2023 – 2028</span>
         </div>
 
         <div className="edu-card">
