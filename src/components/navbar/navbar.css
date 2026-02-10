@@ -62,7 +62,7 @@
   text-shadow: 0 0 6px var(--jarvis-cyan);
 }
 
-/* CTA Button (desktop stays same) */
+/* CTA Button (DESKTOP ONLY — unchanged) */
 .nav-cta {
   padding: 10px 22px;
   font-size: 16px;
@@ -74,18 +74,11 @@
   box-shadow: 0 0 12px rgba(255,106,0,0.6);
 }
 
-/* Menu icon */
-.menu-icon {
-  display: none;
-  cursor: pointer;
-}
-
 /* =========================
-   RESPONSIVE FIXES (MOBILE / TABLET ONLY)
+   RESPONSIVE FIXES (TABLET + PHONE ONLY)
    ========================= */
 
-/* Tablet & Mobile */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
   /* Slim navbar */
   .navbar {
@@ -99,19 +92,24 @@
     box-shadow: 0 0 6px rgba(0,229,255,0.6);
   }
 
-  /* Hide CTA on mobile (KEY FIX) */
-  .nav-cta {
+  /* 🔥 REMOVE "Connect With Me" button */
+  .navbar > :last-child {
     display: none;
   }
 
-  /* Show hamburger icon */
-  .menu-icon {
-    display: block;
-    font-size: 26px;
+  /* 🔥 SHOW & ENLARGE hamburger icon */
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
     color: var(--jarvis-text);
+    cursor: pointer;
+    line-height: 1;
   }
 
-  /* Mobile menu dropdown */
+  /* Dropdown menu */
   .nav-menu {
     position: absolute;
     top: 100%;
