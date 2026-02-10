@@ -9,24 +9,19 @@
 }
 
 /* =========================
-   NAVBAR (DESKTOP - UNCHANGED)
+   NAVBAR (DESKTOP)
    ========================= */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 12px 40px;
-
   background: rgba(2, 6, 23, 0.55);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-
   border-radius: 0 0 14px 14px;
   border-bottom: 1px solid rgba(0,229,255,0.3);
-
   box-shadow: 0 4px 20px rgba(0,229,255,0.25);
-
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -41,7 +36,7 @@
   box-shadow: 0 0 10px var(--jarvis-cyan);
 }
 
-/* Menu */
+/* Navigation Menu */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -62,7 +57,7 @@
   text-shadow: 0 0 6px var(--jarvis-cyan);
 }
 
-/* CTA Button (DESKTOP ONLY — unchanged) */
+/* Call-to-Action Button (Desktop only) */
 .nav-cta {
   padding: 10px 22px;
   font-size: 16px;
@@ -75,57 +70,49 @@
 }
 
 /* =========================
-   RESPONSIVE FIXES (TABLET + PHONE ONLY)
+   RESPONSIVE NAVBAR
+   (Tablet & Mobile)
    ========================= */
-
 @media (max-width: 1024px) {
 
-  /* Slim navbar */
   .navbar {
     padding: 8px 16px;
   }
 
-  /* Smaller logo */
   .nav-logo {
     width: 46px;
     height: 46px;
     box-shadow: 0 0 6px rgba(0,229,255,0.6);
   }
 
-  /* 🔥 REMOVE "Connect With Me" button */
   .navbar > :last-child {
     display: none;
   }
 
-  /* 🔥 SHOW & ENLARGE hamburger icon */
+  /* Menu Toggle */
   .menu-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 32px;
     color: var(--jarvis-text);
     cursor: pointer;
     line-height: 1;
   }
 
-  /* Dropdown menu */
+  /* Dropdown Menu */
   .nav-menu {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-
     flex-direction: column;
     gap: 12px;
-
     background: rgba(2, 6, 23, 0.8);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-
     padding: 10px 0;
     border-radius: 0 0 14px 14px;
-
     display: none;
   }
 
@@ -133,19 +120,17 @@
     display: flex;
   }
 
-  /* Bigger tap targets */
   .nav-menu li a {
     font-size: 16px;
   }
 
-  /* Disable hover glow on touch */
   .nav-menu li a:hover {
     color: var(--jarvis-text);
     text-shadow: none;
   }
 }
 
-/* Small phones */
+/* Small Devices */
 @media (max-width: 480px) {
   .nav-logo {
     width: 42px;

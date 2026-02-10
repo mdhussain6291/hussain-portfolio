@@ -1,17 +1,18 @@
 .footer {
-  /* Glassmorphism background */
-  background: rgba(26, 26, 26, 0.6); /* semi-transparent dark grey */
-  backdrop-filter: blur(10px);       /* blur behind the footer */
-  -webkit-backdrop-filter: blur(10px); /* for Safari */
-  
-  border-top: 2px solid #00e5ff55;   /* subtle neon border on top */
-  border-radius: 10px 10px 0 0;      /* rounded top corners */
-  
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-top: 2px solid #00e5ff55;
+  border-radius: 10px 10px 0 0;
+
   color: white;
   text-align: center;
   padding: 50px 20px;
   margin-top: 50px;
 }
+
+/* Footer Content */
 .footer-content h2 {
   font-size: 2rem;
   color: white;
@@ -28,6 +29,7 @@
   font-size: 1rem;
 }
 
+/* Social Links */
 .footer-socials {
   display: flex;
   justify-content: center;
@@ -43,45 +45,35 @@
 
 .footer-socials a:hover {
   transform: scale(1.2);
-  color: #B923E1; /* subtle hover glow */
+  color: #B923E1;
 }
 
 .footer-copy {
   font-size: 0.9rem;
   color: #777;
 }
-/* =========================
-   RESPONSIVE ADD-ONS (FOOTER)
-   No existing code changed
-   ========================= */
 
-/* Adjust padding for smaller screens */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .footer {
     padding: 40px 16px;
     margin-top: 40px;
   }
-}
 
-/* Responsive footer heading */
-.footer-content h2 {
-  font-size: clamp(1.4rem, 5vw, 2rem);
-}
-
-/* Responsive paragraph text */
-.footer-content p {
-  font-size: clamp(0.95rem, 3.5vw, 1rem);
-}
-
-/* Touch-friendly social icons */
-@media (max-width: 768px) {
   .footer-socials a:hover {
     transform: none;
     color: #00e5ff;
   }
 }
 
-/* Slightly smaller icons on very small devices */
+.footer-content h2 {
+  font-size: clamp(1.4rem, 5vw, 2rem);
+}
+
+.footer-content p {
+  font-size: clamp(0.95rem, 3.5vw, 1rem);
+}
+
 @media (max-width: 480px) {
   .footer-socials {
     gap: 16px;
@@ -92,7 +84,6 @@
   }
 }
 
-/* Improve readability on tiny screens */
 @media (max-width: 360px) {
   .footer-copy {
     font-size: 0.85rem;

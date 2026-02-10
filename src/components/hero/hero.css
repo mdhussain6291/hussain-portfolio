@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* JARVIS COLORS */
+/* Theme Variables */
 :root {
   --jarvis-cyan: #00e5ff;
   --jarvis-orange: #ff6a00;
 }
 
+/* Hero Section */
 .hero {
   display: flex;
   justify-content: center;
@@ -14,7 +15,6 @@
   font-family: 'Poppins', sans-serif;
   padding: 50px 20px;
   min-height: 100vh;
- 
   color: white;
 }
 
@@ -41,33 +41,56 @@
   margin-bottom: 15px;
 }
 
-/* Name highlight */
+/* Highlighted Name */
 .hero-name {
   color: var(--jarvis-cyan);
   text-shadow: 0 0 8px var(--jarvis-cyan);
 }
 
-/* Paragraph */
+/* Description */
 .hero p {
   font-size: 1.05rem;
   margin-bottom: 30px;
   color: #bfefff;
 }
 
-/* Buttons */
+/* Action Buttons */
 .hero-buttons {
   display: flex;
   justify-content: center;
   gap: 18px;
 }
 
-/* Force buttons to Jarvis color */
 .hero-buttons .btn {
   background: var(--jarvis-orange);
   box-shadow: 0 0 10px var(--jarvis-orange);
 }
 
-/* Mobile */
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 60px 16px;
+  }
+
+  .hero-img {
+    box-shadow: 0 0 15px rgba(0,229,255,0.5);
+  }
+
+  .hero-img:hover {
+    transform: none;
+    box-shadow: 0 0 20px rgba(0,229,255,0.6);
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 6vw, 2.8rem);
+}
+
+.hero p {
+  font-size: clamp(0.95rem, 3.5vw, 1.05rem);
+}
+
 @media (max-width: 500px) {
   .hero-img {
     width: 140px;
@@ -82,44 +105,7 @@
     font-size: 0.9rem;
   }
 }
-/* =========================
-   RESPONSIVE ADD-ONS (HERO)
-   No existing code changed
-   ========================= */
 
-/* Prevent content overflow on small screens */
-@media (max-width: 768px) {
-  .hero {
-    min-height: auto;
-    padding: 60px 16px;
-  }
-}
-
-/* Smooth responsive heading scaling */
-.hero h1 {
-  font-size: clamp(1.8rem, 6vw, 2.8rem);
-}
-
-/* Improve paragraph readability on all screens */
-.hero p {
-  font-size: clamp(0.95rem, 3.5vw, 1.05rem);
-}
-
-/* Responsive hero image scaling */
-@media (max-width: 768px) {
-  .hero-img {
-    box-shadow: 0 0 15px rgba(0,229,255,0.5);
-  }
-}
-
-@media (max-width: 360px) {
-  .hero-img {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-/* Stack buttons nicely on very small devices */
 @media (max-width: 480px) {
   .hero-buttons {
     flex-direction: column;
@@ -127,10 +113,9 @@
   }
 }
 
-/* Disable hover animation on touch devices */
-@media (max-width: 768px) {
-  .hero-img:hover {
-    transform: none;
-    box-shadow: 0 0 20px rgba(0,229,255,0.6);
+@media (max-width: 360px) {
+  .hero-img {
+    width: 120px;
+    height: 120px;
   }
 }

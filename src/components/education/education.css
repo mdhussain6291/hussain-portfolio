@@ -4,13 +4,10 @@
   color: white;
 }
 
-/* Heading */
-
 .education h2 {
   font-size: 2.8rem;
   margin-bottom: 40px;
   color: white;
-
   text-shadow:
     0 0 5px #00f6ff,
     0 0 10px #00f6ff,
@@ -18,18 +15,19 @@
     0 0 40px #00f6ff;
 }
 
-/* Cards container */
-
+/* Education Cards Layout */
 .education-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
+
+/* Institution Logo */
 .edu-logo {
-  width: 100px;       /* maximum width */
-  height: 100px;      /* maximum height */
-  object-fit: cover; /* keeps aspect ratio */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
   margin-bottom: 15px;
   border-radius: 10px;
   border: 2px solid #00f6ff44;
@@ -38,8 +36,7 @@
   margin-right: auto;
 }
 
-/* Individual card */
-
+/* Education Card */
 .edu-card {
   background: rgba(255, 255, 255, 0.05);
   padding: 25px;
@@ -50,67 +47,49 @@
   transition: 0.3s ease;
 }
 
-/* Hover effect */
-
+/* Hover Interaction */
 .edu-card:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 0 25px #00f6ff;
 }
-
-/* Card title */
 
 .edu-card h3 {
   margin-bottom: 10px;
   font-size: 1.1rem;
 }
 
-/* School / college name */
-
 .edu-card p {
   color: #ccc;
   margin-bottom: 8px;
 }
-
-/* Year */
 
 .edu-card span {
   color: #00f6ff;
   font-size: 0.9rem;
 }
 
-/* Responsive */
-
+/* Responsive Adjustments */
 @media (max-width: 600px) {
   .edu-card {
     width: 90%;
   }
 }
-/* =========================
-   RESPONSIVE ADD-ONS (EDUCATION)
-   No existing code changed
-   ========================= */
 
-/* Better spacing on small screens */
-@media (max-width: 768px) {
-  .education {
-    padding: 50px 16px;
-  }
-}
-
-/* Responsive heading size */
 .education h2 {
   font-size: clamp(1.7rem, 6vw, 2.8rem);
 }
 
-/* Prevent hover jump on touch devices */
 @media (max-width: 768px) {
+  .education {
+    padding: 50px 16px;
+  }
+
   .edu-card:hover {
     transform: none;
     box-shadow: 0 0 15px #00f6ff33;
   }
 }
 
-/* Scale education logos on small screens */
 @media (max-width: 480px) {
   .edu-logo {
     width: 80px;
@@ -118,15 +97,11 @@
   }
 }
 
-/* Improve card spacing on very small devices */
 @media (max-width: 360px) {
   .education-box {
     gap: 20px;
   }
-}
 
-/* Improve text readability on small screens */
-@media (max-width: 360px) {
   .edu-card h3 {
     font-size: 1rem;
   }
@@ -135,4 +110,3 @@
     font-size: 0.95rem;
   }
 }
-

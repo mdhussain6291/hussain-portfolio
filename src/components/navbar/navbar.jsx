@@ -1,4 +1,4 @@
-import React, { useState } from "react"; // ✅ ADDED useState
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import logo from "../../assets/logo.svg.png";
@@ -8,9 +8,10 @@ import Button from "../button/button";
 import { FiHome, FiUser, FiFolder, FiFileText } from "react-icons/fi";
 
 const Navbar = () => {
+  // Mobile menu state
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const [menuOpen, setMenuOpen] = useState(false); // ✅ ADDED state
-
+  // Open email client
   const handleConnect = () => {
     window.location.href = "mailto:mdhussain6291@gmail.com";
   };
@@ -21,7 +22,7 @@ const Navbar = () => {
       {/* Logo */}
       <img src={logo} alt="Logo" className="nav-logo" />
 
-      {/* ✅ ADDED Mobile Menu Toggle */}
+      {/* Mobile menu toggle */}
       <div
         className="menu-toggle"
         onClick={() => setMenuOpen(!menuOpen)}
@@ -29,10 +30,10 @@ const Navbar = () => {
         ☰
       </div>
 
-      {/* Menu */}
-      <ul className={`nav-menu ${menuOpen ? "active" : ""}`}> {/* ✅ ADDED active class */}
+      {/* Navigation menu */}
+      <ul className={`nav-menu ${menuOpen ? "active" : ""}`}>
         <li>
-          <Link to="/" onClick={() => setMenuOpen(false)}> {/* ✅ ADDED close on click */}
+          <Link to="/" onClick={() => setMenuOpen(false)}>
             <FiHome className="nav-icon" /> Home
           </Link>
         </li>
@@ -53,7 +54,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* Button */}
+      {/* Connect button */}
       <Button text="Connect With Me" onClick={handleConnect} />
 
     </nav>
@@ -61,3 +62,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

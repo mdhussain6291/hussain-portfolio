@@ -8,15 +8,17 @@
 .contact h2 {
   font-size: 3rem;
   margin-bottom: 40px;
-  color: white; /* pure white text */
+  color: white;
   text-shadow: 
-    0 0 5px #00e5ff,   /* small glow */
-    0 0 10px #00e5ff,  /* medium glow */
-    0 0 20px #00e5ff,  /* larger glow */
-    0 0 30px #00e5ff55; /* subtle outer glow */
+    0 0 5px #00e5ff,
+    0 0 10px #00e5ff,
+    0 0 20px #00e5ff,
+    0 0 30px #00e5ff55;
 }
 
-/* Cards */
+/* =========================
+   Contact Cards
+   ========================= */
 
 .contact-cards {
   display: grid;
@@ -55,14 +57,18 @@
   text-shadow: 0 0 8px #00f6ff;
 }
 
-/* Icons */
+/* =========================
+   Icons
+   ========================= */
 
 .contact-icon {
   width: 42px;
   margin-bottom: 10px;
 }
 
-/* Form */
+/* =========================
+   Contact Form
+   ========================= */
 
 .contact-form {
   max-width: 500px;
@@ -96,48 +102,36 @@
 .contact-form button:hover {
   transform: scale(1.05);
 }
+
 /* =========================
-   RESPONSIVE ADD-ONS ONLY
-   (No existing code changed)
+   Responsive Adjustments
    ========================= */
 
-/* Better mobile spacing */
 @media (max-width: 768px) {
   .contact {
     min-height: auto;
     padding: 60px 16px;
   }
-}
 
-/* Responsive heading */
-.contact h2 {
-  font-size: clamp(1.8rem, 6vw, 3rem);
-}
-
-/* Improve card layout on very small screens */
-@media (max-width: 480px) {
-  .contact-cards {
-    gap: 18px;
-  }
-}
-
-/* Disable hover jump on touch devices */
-@media (max-width: 768px) {
   .contact-card:hover {
     transform: none;
     box-shadow: 0 0 15px #00f6ff33;
   }
 }
 
-/* Responsive icons */
+.contact h2 {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+}
+
 @media (max-width: 480px) {
+  .contact-cards {
+    gap: 18px;
+  }
+
   .contact-icon {
     width: 36px;
   }
-}
 
-/* Full-width form on mobile */
-@media (max-width: 480px) {
   .contact-form {
     width: 100%;
   }
@@ -147,7 +141,6 @@
   }
 }
 
-/* Prevent horizontal scroll */
 body {
   overflow-x: hidden;
 }

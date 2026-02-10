@@ -1,7 +1,7 @@
 import React from 'react';
 import './hero.css';
 import profile from "../../assets/profile.jpeg";
-import resumePDF from "../../assets/Hussain.Resume.pdf"; // ✅ import your resume here
+import resumePDF from "../../assets/Hussain.Resume.pdf";
 import Button from '../button/button';
 
 // ✅ Import Typewriter
