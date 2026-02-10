@@ -1,10 +1,16 @@
-/* JARVIS COLOR THEME */
+/* =========================
+   JARVIS COLOR THEME
+   ========================= */
 :root {
   --jarvis-bg: linear-gradient(135deg, #020617, #03132b, #041c3a);
   --jarvis-cyan: #00e5ff;
   --jarvis-orange: #ff6a00;
   --jarvis-text: #e5faff;
 }
+
+/* =========================
+   NAVBAR (DESKTOP - UNCHANGED)
+   ========================= */
 .navbar {
   display: flex;
   align-items: center;
@@ -12,14 +18,11 @@
 
   padding: 12px 40px;
 
-  /* Glass effect */
   background: rgba(2, 6, 23, 0.55);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 
-  /* Only bottom rounded */
   border-radius: 0 0 14px 14px;
-
   border-bottom: 1px solid rgba(0,229,255,0.3);
 
   box-shadow: 0 4px 20px rgba(0,229,255,0.25);
@@ -29,15 +32,12 @@
   z-index: 1000;
 }
 
-
 /* Logo */
 .nav-logo {
   width: 80px;
   height: 80px;
-  object-fit:cover;
+  object-fit: cover;
   border-radius: 50%;
-
-  /* arc reactor glow */
   box-shadow: 0 0 10px var(--jarvis-cyan);
 }
 
@@ -61,35 +61,57 @@
   color: var(--jarvis-cyan);
   text-shadow: 0 0 6px var(--jarvis-cyan);
 }
+
+/* CTA Button (desktop stays same) */
+.nav-cta {
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #ff6a00, #ff8c1a);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(255,106,0,0.6);
+}
+
+/* Menu icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
 /* =========================
-   RESPONSIVE ADD-ONS (NAVBAR)
-   No existing code changed
+   RESPONSIVE FIXES (MOBILE / TABLET ONLY)
    ========================= */
 
-/* Reduce padding on smaller screens */
+/* Tablet & Mobile */
 @media (max-width: 768px) {
+
+  /* Slim navbar */
   .navbar {
-    padding: 12px 20px;
+    padding: 8px 16px;
   }
-}
 
-/* Responsive logo scaling */
-@media (max-width: 768px) {
+  /* Smaller logo */
   .nav-logo {
-    width: 60px;
-    height: 60px;
+    width: 46px;
+    height: 46px;
+    box-shadow: 0 0 6px rgba(0,229,255,0.6);
   }
-}
 
-@media (max-width: 480px) {
-  .nav-logo {
-    width: 50px;
-    height: 50px;
+  /* Hide CTA on mobile (KEY FIX) */
+  .nav-cta {
+    display: none;
   }
-}
 
-/* Stack menu vertically on mobile */
-@media (max-width: 768px) {
+  /* Show hamburger icon */
+  .menu-icon {
+    display: block;
+    font-size: 26px;
+    color: var(--jarvis-text);
+  }
+
+  /* Mobile menu dropdown */
   .nav-menu {
     position: absolute;
     top: 100%;
@@ -97,14 +119,13 @@
     width: 100%;
 
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 
-    background: rgba(2, 6, 23, 0.9);
+    background: rgba(2, 6, 23, 0.8);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
 
-    padding: 25px 0;
-
+    padding: 20px 0;
     border-radius: 0 0 14px 14px;
 
     display: none;
@@ -113,19 +134,23 @@
   .nav-menu.active {
     display: flex;
   }
-}
 
-/* Improve tap targets on mobile */
-@media (max-width: 768px) {
+  /* Bigger tap targets */
   .nav-menu li a {
     font-size: 20px;
   }
+
+  /* Disable hover glow on touch */
+  .nav-menu li a:hover {
+    color: var(--jarvis-text);
+    text-shadow: none;
+  }
 }
 
-/* Disable hover glow jump on touch devices */
-@media (max-width: 768px) {
-  .nav-menu li a:hover {
-    text-shadow: none;
-    color: var(--jarvis-text);
+/* Small phones */
+@media (max-width: 480px) {
+  .nav-logo {
+    width: 42px;
+    height: 42px;
   }
 }
