@@ -85,3 +85,54 @@
     width: 90%;
   }
 }
+/* =========================
+   RESPONSIVE ADD-ONS (EDUCATION)
+   No existing code changed
+   ========================= */
+
+/* Better spacing on small screens */
+@media (max-width: 768px) {
+  .education {
+    padding: 50px 16px;
+  }
+}
+
+/* Responsive heading size */
+.education h2 {
+  font-size: clamp(1.7rem, 6vw, 2.8rem);
+}
+
+/* Prevent hover jump on touch devices */
+@media (max-width: 768px) {
+  .edu-card:hover {
+    transform: none;
+    box-shadow: 0 0 15px #00f6ff33;
+  }
+}
+
+/* Scale education logos on small screens */
+@media (max-width: 480px) {
+  .edu-logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Improve card spacing on very small devices */
+@media (max-width: 360px) {
+  .education-box {
+    gap: 20px;
+  }
+}
+
+/* Improve text readability on small screens */
+@media (max-width: 360px) {
+  .edu-card h3 {
+    font-size: 1rem;
+  }
+
+  .edu-card p {
+    font-size: 0.95rem;
+  }
+}
+

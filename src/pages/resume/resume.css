@@ -67,3 +67,53 @@
   transform: scale(1.05);
   box-shadow: 0 0 30px #B923E1bb;
 }
+/* ---------- Tablet ---------- */
+@media (max-width: 768px) {
+  .resume {
+    padding: 60px 15px;
+  }
+
+  .resume h2 {
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+  }
+
+  .resume-img {
+    width: 320px;
+  }
+
+  .resume-content p {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 480px) {
+  .resume {
+    padding: 50px 10px;
+  }
+
+  .resume h2 {
+    font-size: 1.9rem;
+  }
+
+  .resume-img {
+    width: 260px;
+    border-radius: 15px;
+  }
+
+  /* Disable heavy zoom on small screens */
+  .resume-img:hover {
+    transform: scale(1.05);
+  }
+
+  .resume-content p {
+    font-size: 0.95rem;
+  }
+
+  .resume-content button {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+}
+

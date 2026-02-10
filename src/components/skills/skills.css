@@ -13,9 +13,9 @@
 
   text-shadow:
     0 0 5px #00f6ff,
-    0 0 5px #00f6ff,
-    0 0 5px #00f6ff,
-    0 0 5px #00f6ff;
+    0 0 10px #00f6ff,
+    0 0 15px #00f6ff,
+    0 0 20px #00f6ff;
 }
 
 
@@ -57,4 +57,50 @@
 .skill-card p {
   margin: 0;
   font-size: 1rem;
+}
+/* =========================
+   RESPONSIVE ADD-ONS (SKILLS)
+   No existing code changed
+   ========================= */
+
+/* Better spacing & height on mobile */
+@media (max-width: 768px) {
+  .skills {
+    min-height: auto;
+    padding: 50px 16px;
+  }
+}
+
+/* Responsive heading size */
+.skills h2 {
+  font-size: clamp(1.7rem, 6vw, 2.8rem);
+}
+
+/* Improve grid spacing on small devices */
+@media (max-width: 480px) {
+  .skills-grid {
+    gap: 18px;
+  }
+}
+
+/* Disable hover jump on touch devices */
+@media (max-width: 768px) {
+  .skill-card:hover {
+    transform: none;
+    box-shadow: 0 0 15px #00f6ff33;
+  }
+}
+
+/* Responsive skill icons */
+@media (max-width: 480px) {
+  .skill-card img {
+    width: 48px;
+  }
+}
+
+/* Improve text readability on very small screens */
+@media (max-width: 360px) {
+  .skill-card p {
+    font-size: 0.95rem;
+  }
 }

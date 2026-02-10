@@ -29,3 +29,33 @@
   color: white;
   text-decoration: none;
 }
+/* ---------- Responsive: Tablets ---------- */
+@media (max-width: 768px) {
+  .notfound h1 {
+    font-size: 4rem;
+  }
+
+  .notfound h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ---------- Responsive: Mobile ---------- */
+@media (max-width: 480px) {
+  .notfound h1 {
+    font-size: 3rem;
+  }
+
+  .notfound h2 {
+    font-size: 1.3rem;
+  }
+
+  .notfound p {
+    font-size: 0.95rem;
+  }
+
+  .home-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}

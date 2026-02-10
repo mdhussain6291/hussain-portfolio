@@ -96,3 +96,58 @@
 .contact-form button:hover {
   transform: scale(1.05);
 }
+/* =========================
+   RESPONSIVE ADD-ONS ONLY
+   (No existing code changed)
+   ========================= */
+
+/* Better mobile spacing */
+@media (max-width: 768px) {
+  .contact {
+    min-height: auto;
+    padding: 60px 16px;
+  }
+}
+
+/* Responsive heading */
+.contact h2 {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+}
+
+/* Improve card layout on very small screens */
+@media (max-width: 480px) {
+  .contact-cards {
+    gap: 18px;
+  }
+}
+
+/* Disable hover jump on touch devices */
+@media (max-width: 768px) {
+  .contact-card:hover {
+    transform: none;
+    box-shadow: 0 0 15px #00f6ff33;
+  }
+}
+
+/* Responsive icons */
+@media (max-width: 480px) {
+  .contact-icon {
+    width: 36px;
+  }
+}
+
+/* Full-width form on mobile */
+@media (max-width: 480px) {
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}

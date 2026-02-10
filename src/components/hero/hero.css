@@ -82,3 +82,55 @@
     font-size: 0.9rem;
   }
 }
+/* =========================
+   RESPONSIVE ADD-ONS (HERO)
+   No existing code changed
+   ========================= */
+
+/* Prevent content overflow on small screens */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 60px 16px;
+  }
+}
+
+/* Smooth responsive heading scaling */
+.hero h1 {
+  font-size: clamp(1.8rem, 6vw, 2.8rem);
+}
+
+/* Improve paragraph readability on all screens */
+.hero p {
+  font-size: clamp(0.95rem, 3.5vw, 1.05rem);
+}
+
+/* Responsive hero image scaling */
+@media (max-width: 768px) {
+  .hero-img {
+    box-shadow: 0 0 15px rgba(0,229,255,0.5);
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Stack buttons nicely on very small devices */
+@media (max-width: 480px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+
+/* Disable hover animation on touch devices */
+@media (max-width: 768px) {
+  .hero-img:hover {
+    transform: none;
+    box-shadow: 0 0 20px rgba(0,229,255,0.6);
+  }
+}

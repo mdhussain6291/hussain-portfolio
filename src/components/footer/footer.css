@@ -50,3 +50,51 @@
   font-size: 0.9rem;
   color: #777;
 }
+/* =========================
+   RESPONSIVE ADD-ONS (FOOTER)
+   No existing code changed
+   ========================= */
+
+/* Adjust padding for smaller screens */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 16px;
+    margin-top: 40px;
+  }
+}
+
+/* Responsive footer heading */
+.footer-content h2 {
+  font-size: clamp(1.4rem, 5vw, 2rem);
+}
+
+/* Responsive paragraph text */
+.footer-content p {
+  font-size: clamp(0.95rem, 3.5vw, 1rem);
+}
+
+/* Touch-friendly social icons */
+@media (max-width: 768px) {
+  .footer-socials a:hover {
+    transform: none;
+    color: #00e5ff;
+  }
+}
+
+/* Slightly smaller icons on very small devices */
+@media (max-width: 480px) {
+  .footer-socials {
+    gap: 16px;
+  }
+
+  .footer-socials a {
+    font-size: 1.3rem;
+  }
+}
+
+/* Improve readability on tiny screens */
+@media (max-width: 360px) {
+  .footer-copy {
+    font-size: 0.85rem;
+  }
+}

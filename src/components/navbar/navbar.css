@@ -61,3 +61,71 @@
   color: var(--jarvis-cyan);
   text-shadow: 0 0 6px var(--jarvis-cyan);
 }
+/* =========================
+   RESPONSIVE ADD-ONS (NAVBAR)
+   No existing code changed
+   ========================= */
+
+/* Reduce padding on smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+}
+
+/* Responsive logo scaling */
+@media (max-width: 768px) {
+  .nav-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Stack menu vertically on mobile */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    flex-direction: column;
+    gap: 25px;
+
+    background: rgba(2, 6, 23, 0.9);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    padding: 25px 0;
+
+    border-radius: 0 0 14px 14px;
+
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
+/* Improve tap targets on mobile */
+@media (max-width: 768px) {
+  .nav-menu li a {
+    font-size: 20px;
+  }
+}
+
+/* Disable hover glow jump on touch devices */
+@media (max-width: 768px) {
+  .nav-menu li a:hover {
+    text-shadow: none;
+    color: var(--jarvis-text);
+  }
+}
